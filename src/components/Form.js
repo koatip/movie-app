@@ -52,7 +52,9 @@ export default function Form({ id = null }) {
         age: parseInt(formData.age ? formData.age : 0),
         oscar: parseInt(formData.oscar),
         hungarian: formData.hungarian,
-        auth: formData.auth
+        auth: formData.auth,
+        email: formData.email,
+        description: formData.description
       }
       if (id) {
         updateDoc(doc(db, 'films', id), data)

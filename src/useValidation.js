@@ -47,7 +47,7 @@ export default function useValidation() {
     ],
     description: [
       {
-        fn: isNotEmpty,
+        fn: isNotaEmpty,
         errorMessage: 'Nem lehet üres'
       },
     ]
@@ -58,6 +58,11 @@ export default function useValidation() {
   }
 
   function isNotEmpty(value) {
+    return value !== ''
+  }
+
+  function isNotaEmpty(value) {
+    console.log(value);
     return value !== ''
   }
 
